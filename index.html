@@ -23,18 +23,17 @@
 </button>
 
 <script> //start of JS code//
-var value = 0;
 var Cookies = 0;
 var AddCookies = 1;
 //brings cookie value from home page//
-var value = JSON.parse(localStorage.myValue);
+window.onload = Cookies = JSON.parse(localStorage.myValue);
 
-//checks if value from other page exists then adds to existing value//
-//or begins adding cookies from 0//
+//checks if value from other page is > 0 if T, shows cookie value, then resets local storage (so else statement can run)//
+//else adds to existing cookie value (which will be 0 if no data from other page saved)//
 function Add() {
-if (Cookies<value) {
-    Cookies = value
+if (Cookies==JSON.parse(localStorage.myValue)) {
     document.getElementById("total").innerHTML = Cookies;
+    localStorage.myValue = 0;
 } else {
     Cookies = Cookies + AddCookies
     document.getElementById("total").innerHTML = Cookies;
