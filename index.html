@@ -27,13 +27,12 @@ var Cookies = 0;
 var AddCookies = 1;
 //brings cookie value from home page//
 window.onload = Cookies = JSON.parse(localStorage.myValue);
-
 //checks if value from other page is > 0 if T, shows cookie value, then resets local storage (so else statement can run)//
 //else adds to existing cookie value (which will be 0 if no data from other page saved)//
 function Add() {
-if (Cookies==JSON.parse(localStorage.myValue)) {
+if (JSON.parse(localStorage.myValue)>0) {
     document.getElementById("total").innerHTML = Cookies;
-    localStorage.myValue = 0;
+    localStorage.myValue = -1;
 } else {
     Cookies = Cookies + AddCookies
     document.getElementById("total").innerHTML = Cookies;
