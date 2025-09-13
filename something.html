@@ -1,3 +1,4 @@
+<link rel="stylesheet" type="text/css" href="index.css  ">
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,9 +6,42 @@
     <meta name="viewport" content="width=, initial-scale=1.0">
     <title>something</title>
 </head>
+
+<!--back to main page button-->
 <body>
 <a href="index.html">
-    <button>hello world!</button>
+    <button onclick="submitValue()">hello world!</button>
 </a>
+
+<!--cookie clicker button2-->
+<button class="button1"; onclick="Add()";>
+    <span id="total">Click to show number of Cookies!</span>
+</button>
+<script>
+localStorage.clear();
+var value = 0
+var Cookies = 0;
+var AddCookies = 1;
+//brings cookie value from home page
+var value = JSON.parse(sessionStorage.myValue);
+
+//checks if value from other page exists then adds to existing value
+//or begins adding cookies from 0
+function Add() {
+if (Cookies<value) {
+    Cookies = value
+    document.getElementById("total").innerHTML = Cookies;
+} else {
+    Cookies = Cookies + AddCookies
+    document.getElementById("total").innerHTML = Cookies;
+}
+}
+//sends value to other HTML
+function submitValue() {
+    sessionStorage.myValue = Cookies;
+    window.location.href = "something.html";
+}
+</script>
+
 </body>
 </html>

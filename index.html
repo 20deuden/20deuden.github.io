@@ -1,3 +1,4 @@
+<link rel="stylesheet" type="text/css" href="index.css  ">
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>home page</title>
 </head>
+
+<!--background image-->
 <style>
 body {
     background-image: url("jeffrey-workman-YvkH8R1zoQM-unsplash.jpg");
@@ -12,9 +15,41 @@ body {
     background-size: 100vw 100vh;
 }
 </style>
+
+<!--page switch button-->
 <body> 
 <a href="something.html">
-<button style="background-color: rgb(61, 168, 51); color: aliceblue;">Click Me!</button>
+    <button class="button" onclick="submitValue()";>Click Me!</button>
 </a>
+
+<!--cookie clicker button--> <!--maybe change to image of cookie-->
+<button class="button1"; onclick="Add()";>
+    <span id="total">Click to show number of Cookies!</span>
+</button>
+<script>
+var value = 0;
+var Cookies = 0;
+var AddCookies = 1;
+//brings cookie value from home page
+var value = JSON.parse(sessionStorage.myValue);
+
+//checks if value from other page exists then adds to existing value
+//or begins adding cookies from 0
+function Add() {
+if (Cookies<value) {
+    Cookies = value
+    document.getElementById("total").innerHTML = Cookies;
+} else {
+    Cookies = Cookies + AddCookies
+    document.getElementById("total").innerHTML = Cookies;
+}
+}
+//sends value to other HTML
+function submitValue() {
+    sessionStorage.myValue = JSON.stringify(Cookies);
+    window.location.href = "something.html";
+}
+</script>
+
 </body>
 </html>
