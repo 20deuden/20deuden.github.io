@@ -1,12 +1,12 @@
 /*background image*/
 .body {
-    background-image: url("5630939.jpg");
+    background-image: url("IMG/5630939.jpg");
     background-repeat: no-repeat;
     background-size: 100vw 100vh;
 }
 /*background image second page*/
 .bodya{
-    background-image: url("5590457.jpg");
+    background-image: url("IMG/5590457.jpg");
     background-repeat: no-repeat;
     background-size: 100vw 100vh;
 }
@@ -36,7 +36,7 @@ header {
     color: aliceblue;
 }
 .buttoncookie{
-    background: url("cookieimage.jpg") no-repeat center;
+    background: url("IMG/cookieimage.jpg") no-repeat center;
     border: black solid 2px;
     display: block;
     margin-left: auto;
