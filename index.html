@@ -11,13 +11,23 @@
 <script src="JScode.js"> </script>
 <!--header-->
 <header class="header">
+    <div class="divheadtext">
+    <!--Main page text-->
     <h1>Main Page</h1>
     <p>This will be the main page displaying all projects and other details. (for fun you can also collect cookies!)</p>
+
     <!--page switch button-->
+    <div class="divhead1">
     <button class="button" onclick="submitValue(); switchPage()";>Go to second page. (auto-saves Cookies)</button>
+    </div>
+
+    <!--saves cookie value without switching page-->
+    <div class="divhead2">
+    <button class="buttonsave" onclick="submitValue()">Save Cookies</button>
+    </div>
+
+    </div>
 </header>
-<!--saves cookie value without switching page-->
-<button class="buttonsave" onclick="submitValue()">Save Cookies</button>
 
 <!--cookie clicker button-->
 <button class="buttoncookie"; onclick="Add()";>
