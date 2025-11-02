@@ -35,13 +35,36 @@ header {
 
 }
 /*text block styles*/
-/*
 .divtext1 {
     float: left;
     display: inline;
-    width: auto;
+    width: calc(100vw - 250px);
+    height: auto;
+
+    margin: 5px;
+    padding-left: 4px;
+    padding-right: 4px;
+    border-width: 2px;
+
+    border-style: solid;
+    border-color: #ffffff;
+    background-color: rgb(131, 158, 182);
 }
-*/
+.divtext2 {
+    float: right;
+    display: inline;
+    width: auto;
+    height: auto;
+
+    margin: 5px;
+    padding-left: 4px;
+    padding-right: 4px;
+    border-width: 2px;
+
+    border-style: solid;
+    border-color: #ffffff;
+    background-color: rgb(131, 158, 182);
+}
 
 /*button styles*/
 .button { 
